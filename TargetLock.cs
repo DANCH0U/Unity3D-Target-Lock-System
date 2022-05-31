@@ -19,7 +19,7 @@ public class TargetLock : MonoBehaviour
     [SerializeField] private string enemyTag;
     [SerializeField] private KeyCode _Input;
     [SerializeField] private Vector2 targetLockOffset;
-    [SerializeField] private float minDistance; // minunu distance to stop rotation if you get close to target
+    [SerializeField] private float minDistance; // minimum distance to stop rotation if you get close to target
     [SerializeField] private float maxDistance;
     
     public bool isTargeting;
@@ -85,8 +85,8 @@ public class TargetLock : MonoBehaviour
             aimIcon.transform.position = mainCamera.WorldToScreenPoint(target.position);
 
         if ((target.position - transform.position).magnitude < minDistance) return;
-        mouseX = (viewPos.x - 0.5f + targetLockOffset.x) * 3f;
-        mouseY = (viewPos.y - 0.5f + targetLockOffset.y) * 3f;
+        mouseX = (viewPos.x - 0.5f + targetLockOffset.x) * 3f;              // you can change the [ 3f ] value to make it faster or  slower
+        mouseY = (viewPos.y - 0.5f + targetLockOffset.y) * 3f;              // don't use delta time here.
     }
 
 
