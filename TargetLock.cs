@@ -8,21 +8,22 @@ public class TargetLock : MonoBehaviour
 { 
     [Header("Objects")]
     [Space]
-    [SerializeField] private Camera mainCamera;
-    [SerializeField] private CinemachineFreeLook cinemachineFreeLook;
+    [SerializeField] private Camera mainCamera;            // your main camera object.
+    [SerializeField] private CinemachineFreeLook cinemachineFreeLook; //cinemachine free lock camera object.
     [Space]
     [Header("UI")]
-    [SerializeField] private Image aimIcon;
+    [SerializeField] private Image aimIcon;  // ui image of aim icon u can leave it null.
     [Space]
     [Header("Settings")]
     [Space]
-    [SerializeField] private string enemyTag;
+    [SerializeField] private string enemyTag; // the enemies tag.
     [SerializeField] private KeyCode _Input;
     [SerializeField] private Vector2 targetLockOffset;
     [SerializeField] private float minDistance; // minimum distance to stop rotation if you get close to target
     [SerializeField] private float maxDistance;
     
     public bool isTargeting;
+    
     private float maxAngle;
     private Transform currentTarget;
     private float mouseX;
